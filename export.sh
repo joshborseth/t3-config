@@ -19,6 +19,7 @@ copy_file() {
 
 copy_file "$T3_SRC/settings.json" "$ROOT/userdata/settings.json"
 copy_file "$T3_SRC/keybindings.json" "$ROOT/userdata/keybindings.json"
+copy_file "$T3_SRC/client-settings.json" "$ROOT/userdata/client-settings.json"
 copy_file "$CURSOR_SRC/mcp.json" "$ROOT/cursor/mcp.json"
 
 python3 - "$CURSOR_SRC/cli-config.json" "$ROOT/cursor/cli-config.json" <<'PY'

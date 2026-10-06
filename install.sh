@@ -24,6 +24,7 @@ install_file() {
 
 install_file "$ROOT/userdata/settings.json" "$T3_DEST/settings.json"
 install_file "$ROOT/userdata/keybindings.json" "$T3_DEST/keybindings.json"
+install_file "$ROOT/userdata/client-settings.json" "$T3_DEST/client-settings.json"
 install_file "$ROOT/cursor/mcp.json" "$CURSOR_DEST/mcp.json"
 
 python3 - "$ROOT/cursor/cli-config.json" "$CURSOR_DEST/cli-config.json" "$stamp" <<'PY'
