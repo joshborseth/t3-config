@@ -1,0 +1,13 @@
+# Machine-local T3 data. Never commit these if they get copied in.
+secrets/
+logs/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.bin
+anonymous-id
+environment-id
+server-runtime.json
+model-manifest.json
+usage-scan-cache.json
+usage-model-rates.json
