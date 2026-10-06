@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "executor": {
+      "type": "http",
+      "url": "https://slambox.tail76a394.ts.net/mcp"
+    }
+  }
+}
