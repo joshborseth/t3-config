@@ -104,5 +104,7 @@
         "customModels": []
       }
     }
-  }
+  },
+  "defaultTheme": "poimandres-storm-noitalics",
+  "defaultThemeSetAt": "2026-10-08T20:57:46.055Z"
 }
