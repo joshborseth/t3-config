@@ -14,18 +14,24 @@ That copies the files below into place and backs up anything already there. Rest
 
 ## After you change settings
 
+A color theme edited in the app stays in that app until you publish it. Download the theme from the theme editor, then:
+
 ```bash
+t3 theme set path/to/theme.json
 ./export.sh
 git add -A
 git commit -m "Update T3 settings"
 git push
 ```
 
+`t3 theme set` writes `~/.t3/userdata/themes/<id>.json` and sets `defaultTheme` in `settings.json`. Connected clients switch to that theme. `./export.sh` copies both into this repo.
+
 ## What is stored
 
-- `userdata/settings.json` — T3 provider setup and UI preferences, installed to `~/.t3/userdata/`
+- `userdata/settings.json` — T3 provider setup and UI preferences, installed to `~/.t3/userdata/`. `defaultTheme` names the color theme clients follow.
 - `userdata/keybindings.json` — T3 keyboard shortcuts, installed to `~/.t3/userdata/`
 - `userdata/client-settings.json` — T3 appearance, fonts, diff view, notifications, and hidden models, installed to `~/.t3/userdata/`
+- `userdata/themes/*.json` — published color themes, installed to `~/.t3/userdata/themes/`. The filename is the theme id.
 - `cursor/cli-config.json` — Cursor agent model, permissions, display, and sandbox settings, installed to `~/.cursor/cli-config.json`
 - `cursor/mcp.json` — MCP servers the agent can use, installed to `~/.cursor/mcp.json`
 
